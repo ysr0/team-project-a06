@@ -20,6 +20,11 @@ header {
 	color: white;
 }
 
+header > .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .language {
 	flex: 1 80%;
 }
@@ -40,12 +45,14 @@ header {
 
 nav {
 	flex: 1 50%;
+	height: auto;
 }
 
 nav ul {
 	display: flex;
-	align-items: right;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap: 30px;
 }
 
 nav li {
@@ -109,14 +116,14 @@ main section:first-child a:hover {
 	opacity: 1;
 }
 
-main:nth-child(2) {
+main section:nth-child(2) {
 	flex-direction: column;
 	background-color: #e8f9ff;
 	text-align: center;
 	justify-content: center;
 }
 
-main:nth-child(2) h2 {
+main section:nth-child(2) h2 {
 	color: #fecc13;
 	justify-self: center;
 	margin-top: 60px;
@@ -145,6 +152,19 @@ main:nth-child(2) h2 {
 	margin-top: 24px;
 	width: 80%;
 	border-radius: 50%;
+}
+
+.content img:hover {
+	animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 main section:nth-child(3) {

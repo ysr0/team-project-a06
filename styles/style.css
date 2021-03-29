@@ -13,6 +13,7 @@ a {
 }
 
 header {
+	flex-direction: column;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
@@ -26,12 +27,24 @@ header > .container {
 }
 
 .language {
-	flex: 1 80%;
+	flex: 1 75%;
+	padding: 4px 0;
+	background-color: #fecc13;
+	background-clip: padding-box;
+}
+
+.language a {
+	color: black;
 }
 
 .login {
-	flex: 1 20%;
+	flex: 1 25%;
 	text-align: right;
+	padding: 4px 0;
+}
+
+.login a {
+	color: white;
 }
 
 .logo {
@@ -59,6 +72,14 @@ nav li {
 	list-style-type: none;
 }
 
+nav li:hover {
+	color: #fecc13;
+}
+
+nav li:visited {
+	color: grey;
+}
+
 .container {
 	max-width: 1170px;
 	width: 100%;
@@ -84,7 +105,13 @@ main section:first-child {
 	text-align: center;
 }
 
+	main section:first-child .container {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	
 main section:first-child h1 {
+	flex: 1 100%;
 	opacity: 0.7;
 	font-size: 45px;
 	letter-spacing: 5px;
@@ -92,18 +119,20 @@ main section:first-child h1 {
 }
 
 main section:first-child p {
+	flex: 1 100%;
 	opacity: 0.7;
 	margin-bottom: 3px;
 }
 
 main section:first-child .btn {
 	display: flex;
+	column-gap: 50px;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 main section:first-child a {
-	width: 25%;
+	width: 15%;
 	padding: 12px 0;
 	margin: 20px 0;
 	background-color: #fecc13;
@@ -142,6 +171,11 @@ main section:nth-child(2) h2 {
 		padding: 12px;
 		margin: 12px;
 		border-radius: 12px;
+		text-align: center;
+}
+
+.card:hover {
+	box-shadow: 0 0 20px #757575c4;
 }
 
 .card .content {
@@ -165,6 +199,12 @@ main section:nth-child(2) h2 {
   to {
     transform: rotate(359deg);
   }
+}
+
+.card footer {
+	display: flex;
+	justify-self: center;
+	font-weight: bold;
 }
 
 main section:nth-child(3) {
@@ -226,9 +266,37 @@ footer h1 {
 	color: white;
 }
 
+.mainFooter .container {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.mainFooter .logo {
+	flex: 1 50%;
+}
+
 .follow {
 	flex: 1 50%;
 	text-align: right;
+}
+
+.contact {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact .name {
+	flex: 1 75%;
+}
+
+.contact .medsos {
+	flex: 1 25%;
+}
+
+.follow img {
+	margin: 0 8px;
 }
 
 .copyright {

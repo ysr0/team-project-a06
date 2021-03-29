@@ -1,0 +1,95 @@
+/* Tablet */
+@media all and (max-width: 1000px) {
+  .profil {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  
+  .top-wrapper h1 {
+    font-size: 32px;
+  }
+  
+  .heading h2 {
+    font-size: 20px;
+  }
+}
+
+/* Smartphone */
+@media all and (max-width: 670px) {
+  .profil {
+    width: 100%;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .top-wrapper {
+    text-align: left;
+  }
+  
+  .header-right {
+    display: none;
+  }
+  
+  .top-wrapper h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .top-wrapper p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .message-wrapper {
+    text-align: center;
+  }
+
+  .side {
+    width: 100%;
+  }
+  
+  .message {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+  
+   .message {
+		flex-wrap: wrap;
+	}
+	
+	.text {
+		flex: 1 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	
+	form {
+		grid-template-columns: 1fr;
+	}
+	
+	form input[type="text"],
+	form input[type="email"],
+	form textarea,
+	form input[type="image"] {
+		grid-column: unset;
+		grid-row: unset;
+	}
+	
+	input, textarea {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+}
